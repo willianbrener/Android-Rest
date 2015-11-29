@@ -1,14 +1,12 @@
 package com.example.newrestapi.MenuAndroid;
 
 import com.example.newrestapi.R;
-import com.example.newrestapi.CRUDAluno.Cadastrar;
-import com.example.newrestapi.CRUDAluno.Deletar;
-import com.example.newrestapi.CRUDAluno.Listar;
-import com.example.newrestapi.Rest.RestClass;
+import com.example.newrestapi.CRUD.CRUDAluno.Cadastrar;
+import com.example.newrestapi.CRUD.CRUDAluno.Deletar;
+import com.example.newrestapi.CRUD.CRUDAluno.Listar;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,7 +14,7 @@ import android.widget.Button;
 
 public class MenuAluno extends Activity {
 	Button btnCadastrar, btnListar, btnDeletar;
-	RestClass rest;
+	
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -53,19 +51,6 @@ public class MenuAluno extends Activity {
 
 	}
 
-	class ExecuteTask extends AsyncTask<String, Integer, String> {
-
-		@Override
-		protected String doInBackground(String... params) {
-
-			String retorno = rest.PostData(params);
-			return retorno;
-		}
-
-		@Override
-		protected void onPostExecute(String result) {
-		}
-
-	}
+	
 
 }

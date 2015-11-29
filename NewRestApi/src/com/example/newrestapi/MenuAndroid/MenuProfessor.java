@@ -1,9 +1,9 @@
 package com.example.newrestapi.MenuAndroid;
 
 import com.example.newrestapi.R;
-import com.example.newrestapi.CRUDProfessor.Cadastrar;
-import com.example.newrestapi.CRUDProfessor.Deletar;
-import com.example.newrestapi.CRUDProfessor.Listar;
+import com.example.newrestapi.CRUD.CRUDProfessor.Cadastrar;
+import com.example.newrestapi.CRUD.CRUDProfessor.Deletar;
+import com.example.newrestapi.CRUD.CRUDProfessor.Listar;
 import com.example.newrestapi.Rest.RestClass;
 
 import android.app.Activity;
@@ -20,7 +20,7 @@ public class MenuProfessor extends Activity {
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_menu_aluno);
+		setContentView(R.layout.activity_menu_professor);
 
 		btnCadastrar = (Button) findViewById(R.id.button1);
 		btnListar = (Button) findViewById(R.id.button2);

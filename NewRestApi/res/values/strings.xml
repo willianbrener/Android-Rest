@@ -6,6 +6,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_resister_user">ResisterUser</string>
     <string name="title_activity_main_menu">MainActivity</string>
+    <string name="title_activity_menu_aluno">MenuAluno</string>
+    <string name="title_activity_menu_professor">MenuProfessor</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>

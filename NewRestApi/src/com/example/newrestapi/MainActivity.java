@@ -15,6 +15,9 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
+import com.example.newrestapi.MenuAndroid.MenuAluno;
+import com.example.newrestapi.MenuAndroid.MenuProfessor;
+
 import contants.Constantes;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -29,7 +32,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	EditText editSenha,editUsuario;
-	Button btnLogin,btnRegistrar;
+	Button btnLogin,btnRegistrar, btnMenuAluno, btnMenuProfessor;
 	ProgressBar progressBar;
 	
 	
@@ -41,6 +44,9 @@ public class MainActivity extends Activity {
 		editUsuario=(EditText) findViewById(R.id.editText1);
 		btnLogin=(Button) findViewById(R.id.button1);
 		btnRegistrar=(Button) findViewById(R.id.button2);
+		btnMenuAluno=(Button) findViewById(R.id.button9);
+		btnMenuProfessor=(Button) findViewById(R.id.button8);
+		
 		
 		//progess_msz.setVisibility(View.GONE);
 		progressBar=(ProgressBar) findViewById(R.id.progressBar1);
@@ -64,6 +70,23 @@ public class MainActivity extends Activity {
 				String s1=editUsuario.getText().toString();
 				String s2=editSenha.getText().toString();
 				new ExecuteTask().execute(s1,s2);
+				
+			}
+		});
+		
+		btnMenuAluno.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				Intent  intent=new Intent(MainActivity.this,MenuAluno.class);
+				startActivity(intent);
+				
+			}
+		});
+		btnMenuProfessor.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				Intent  intent=new Intent(MainActivity.this,MenuProfessor.class);
+				startActivity(intent);
 				
 			}
 		});

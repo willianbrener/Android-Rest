@@ -32,6 +32,14 @@
             android:name=".MainMenuActivity"
             android:label="@string/title_activity_main_menu" >
         </activity>
+        <activity
+            android:name=".MenuAndroid.MenuAluno"
+            android:label="@string/title_activity_menu_aluno" >
+        </activity>
+        <activity
+            android:name=".MenuAndroid.MenuProfessor"
+            android:label="@string/title_activity_menu_professor" >
+        </activity>
     </application>
 
 </manifest>

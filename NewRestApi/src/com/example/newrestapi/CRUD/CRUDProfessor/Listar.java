@@ -1,4 +1,4 @@
-package com.example.newrestapi.CRUDProfessor;
+package com.example.newrestapi.CRUD.CRUDProfessor;
 
 import android.app.Activity;
 

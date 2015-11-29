@@ -35,7 +35,7 @@ public class ResisterUser extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_resister_user);
 		editUsuario = (EditText) findViewById(R.id.editText1);
-		;
+		
 		editSenha = (EditText) findViewById(R.id.editText2);
 		btnRegistrar = (Button) findViewById(R.id.button1);
 
