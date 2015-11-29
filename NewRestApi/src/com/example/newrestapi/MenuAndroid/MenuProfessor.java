@@ -1,6 +1,7 @@
 package com.example.newrestapi.MenuAndroid;
 
 import com.example.newrestapi.R;
+import com.example.newrestapi.Activity.GenericActivity;
 import com.example.newrestapi.CRUD.CRUDProfessor.Cadastrar;
 import com.example.newrestapi.CRUD.CRUDProfessor.Deletar;
 import com.example.newrestapi.CRUD.CRUDProfessor.Listar;
@@ -14,7 +15,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class MenuProfessor extends Activity {
+public class MenuProfessor extends GenericActivity {
 	Button btnCadastrar, btnListar, btnDeletar;
 	RestClass rest;
 
@@ -58,7 +59,7 @@ public class MenuProfessor extends Activity {
 		@Override
 		protected String doInBackground(String... params) {
 
-			String retorno = rest.PostData(params);
+			String retorno = rest.PostData(params, operacao,"professor");
 			return retorno;
 		}
 

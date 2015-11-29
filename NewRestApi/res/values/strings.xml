@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">NewRestApi</string>
+    <string name="app_name">Trabalho 4º VA</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_resister_user">ResisterUser</string>
     <string name="title_activity_main_menu">MainActivity</string>
-    <string name="title_activity_menu_aluno">MenuAluno</string>
-    <string name="title_activity_menu_professor">MenuProfessor</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_example">Example action</string>
+    <!-- MENU -->
+    <string name="title_activity_menu_aluno">Menu Aluno</string>
+    <string name="title_activity_menu_professor">Menu Professor</string>
+
+    <!-- CRUD ALUNO -->
+    <string name="title_activity_cadastrar_aluno">Cadastrar Aluno</string>
+    <string name="title_activity_listar_aluno">Listar Aluno</string>
+    <string name="title_activity_deletar_aluno">Deletar Aluno</string>
+
+    <!-- CRUD PROFESSOR -->
+    <string name="title_activity_cadastrar_professor">Cadastrar Professor</string>
+    <string name="title_activity_listar_professor">Listar Professor</string>
+    <string name="title_activity_deletar_professor">Deletar Professor</string>
 
 </resources>

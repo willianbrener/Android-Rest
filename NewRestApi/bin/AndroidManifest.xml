@@ -28,17 +28,54 @@
             android:name=".ResisterUser"
             android:label="@string/title_activity_resister_user" >
         </activity>
+        
         <activity
             android:name=".MainMenuActivity"
             android:label="@string/title_activity_main_menu" >
         </activity>
+        
+        <!-- MENU -->
         <activity
             android:name=".MenuAndroid.MenuAluno"
             android:label="@string/title_activity_menu_aluno" >
         </activity>
+        
         <activity
             android:name=".MenuAndroid.MenuProfessor"
             android:label="@string/title_activity_menu_professor" >
+        </activity>
+        
+        
+        <!-- CRUD ALUNO -->
+         <activity
+            android:name=".CRUD.CRUDAluno.Cadastrar"
+            android:label="@string/title_activity_cadastrar_aluno" >
+        </activity>
+        
+         <activity
+            android:name=".CRUD.CRUDAluno.Listar"
+            android:label="@string/title_activity_listar_aluno" >
+        </activity>
+        
+         <activity
+            android:name=".CRUD.CRUDAluno.Deletar"
+            android:label="@string/title_activity_deletar_aluno" >
+        </activity>
+        
+        <!-- CRUD PROFESSOR-->
+         <activity
+            android:name=".CRUD.CRUDProfessor.Cadastrar"
+            android:label="@string/title_activity_cadastrar_professor" >
+        </activity>
+        
+         <activity
+            android:name=".CRUD.CRUDProfessor.Listar"
+            android:label="@string/title_activity_listar_professor" >
+        </activity>
+        
+         <activity
+            android:name=".CRUD.CRUDProfessor.Deletar"
+            android:label="@string/title_activity_deletar_professor" >
         </activity>
     </application>
 

@@ -18,24 +18,21 @@ import org.apache.http.message.BasicNameValuePair;
 import contants.Constantes;
 
 public class RestClass {
-	private static RestClass instance;
-
-	public static RestClass getInstance() {
-		if (instance == null)
-			instance = new RestClass();
-		return instance;
-	}
 
 	@SuppressWarnings("unused")
-	public String PostData(String[] valuse) {
+	public String PostData(String[] valuse, String operation,String entidade) {
 		String s = "";
 		try {
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpPost httpPost = new HttpPost("http://" + Constantes.IP_SERVIDOR
 					+ ":8080/HttpPostServlet1/servlet/httpPostServlet");
 			List<NameValuePair> list = new ArrayList<NameValuePair>();
-			list.add(new BasicNameValuePair("usuario", valuse[0]));
-			list.add(new BasicNameValuePair("senha", valuse[1]));
+			for (int i = 0; i < valuse.length; i++) {
+				list.add(new BasicNameValuePair("value" + i + "", valuse[i]));
+			}
+			list.add(new BasicNameValuePair("quantidade", valuse[101]));
+			list.add(new BasicNameValuePair("operacao", operation));
+			list.add(new BasicNameValuePair("entidade", entidade));
 			httpPost.setEntity(new UrlEncodedFormEntity(list));
 			HttpResponse httpResponse = httpClient.execute(httpPost);
 
