@@ -16,7 +16,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.newrestapi.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,8 +25,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.newrestapi.ResisterUser"
+            android:name=".ResisterUser"
             android:label="@string/title_activity_resister_user" >
+        </activity>
+        <activity
+            android:name=".MainMenuActivity"
+            android:label="@string/title_activity_main_menu" >
         </activity>
     </application>
 

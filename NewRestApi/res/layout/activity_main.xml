@@ -59,4 +59,21 @@
         android:layout_alignParentRight="true"
         android:text="New User" />
 
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_alignRight="@+id/button2"
+        android:text="Menu Aluno" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button9"
+        android:layout_alignBottom="@+id/button9"
+        android:layout_alignLeft="@+id/button1"
+        android:text="Menu Professor" />
+
 </RelativeLayout>
