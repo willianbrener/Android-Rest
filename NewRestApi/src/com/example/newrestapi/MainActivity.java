@@ -53,15 +53,6 @@ public class MainActivity extends Activity {
 		progressBar.setVisibility(View.GONE);
 		
 		
-		btnRegistrar.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				Intent  intent=new Intent(MainActivity.this,ResisterUser.class);
-				startActivity(intent);
-			}
-		});
 		btnLogin.setOnClickListener(new OnClickListener() {
 		
 			public void onClick(View v) {

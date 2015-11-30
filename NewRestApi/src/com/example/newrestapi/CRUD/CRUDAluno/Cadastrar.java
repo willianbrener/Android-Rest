@@ -34,7 +34,6 @@ public class Cadastrar extends GenericActivity {
 	EditText editCPF, editNome, editDataNasci;
 	Button btnCadastrar, btnLimpar;
 	ProgressBar progressBar;
-	RestClass rest = new RestClass();
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -60,7 +59,7 @@ public class Cadastrar extends GenericActivity {
 				String s1 = editCPF.getText().toString();
 				String s2 = editNome.getText().toString();
 				String s3 = editDataNasci.getText().toString();
-				setOperacao("CADASTRO");
+				setOperacao("CADASTRAR");
 				new ExecuteTask().execute(s1, s2, s3);
 			}
 		});
@@ -72,7 +71,7 @@ public class Cadastrar extends GenericActivity {
 
 		@Override
 		protected String doInBackground(String... params) {
-			String retorno =  getRest().PostData(params,operacao,"aluno");
+			String retorno =  PostData(params);
 			return retorno;
 		}
 
@@ -83,13 +82,48 @@ public class Cadastrar extends GenericActivity {
 		}
 
 	}
+	
+	public String PostData(String[] valuse) {
+		String s = "";
+		try {
+			HttpClient httpClient = new DefaultHttpClient();
+			HttpPost httpPost = new HttpPost("http://" + Constantes.IP_SERVIDOR
+					+ ":8080/HttpPostServlet1/servlet/cadastrarAluno");
+			List<NameValuePair> list = new ArrayList<NameValuePair>();
+			list.add(new BasicNameValuePair("cpf", valuse[0]));
+			list.add(new BasicNameValuePair("nome", valuse[1]));
+			list.add(new BasicNameValuePair("data_nascimento", valuse[2]));
+			httpPost.setEntity(new UrlEncodedFormEntity(list));
+			HttpResponse httpResponse = httpClient.execute(httpPost);
 
-	public RestClass getRest() {
-		return rest;
+			HttpEntity httpEntity = httpResponse.getEntity();
+			s = readResponse(httpResponse);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return s;
+
 	}
 
-	public void setRest(RestClass rest) {
-		this.rest = rest;
+	public String readResponse(HttpResponse res) {
+		InputStream is = null;
+		String return_text = "";
+		try {
+			is = res.getEntity().getContent();
+			BufferedReader bufferedReader = new BufferedReader(
+					new InputStreamReader(is));
+			String line = "";
+			StringBuffer sb = new StringBuffer();
+			while ((line = bufferedReader.readLine()) != null) {
+				sb.append(line);
+			}
+			return_text = sb.toString();
+		} catch (Exception e) {
+
+		}
+		return return_text;
+
 	}
+
 
 }

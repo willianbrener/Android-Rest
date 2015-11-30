@@ -56,12 +56,10 @@ public final class R {
         public static final int activity_main=0x7f030006;
         public static final int activity_menu_aluno=0x7f030007;
         public static final int activity_menu_professor=0x7f030008;
-        public static final int activity_resister_user=0x7f030009;
     }
     public static final class menu {
         public static final int main=0x7f070000;
         public static final int menu_aluno=0x7f070001;
-        public static final int resister_user=0x7f070002;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
